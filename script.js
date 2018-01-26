@@ -1,6 +1,7 @@
 // figure out the height the user typed
 var heightInput = document.getElementById("height");
 var brickSelect = document.getElementById("brick");
+var rangeVal = document.getElementById("rangeval");
 heightInput.oninput = startDraw;
 brickSelect.onchange = startDraw;
 
@@ -11,6 +12,7 @@ function startDraw() {
     var height = parseInt(heightStr);
     var brickStr = brickSelect.value;
 
+    rangeVal.innerHTML = height;
     // draw pyramid with that height
     drawPyramid(height, brickStr);
 }
