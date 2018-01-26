@@ -1,7 +1,8 @@
 // figure out the height the user typed
 var heightInput = document.getElementById("height");
 var brickSelect = document.getElementById("brick");
-heightInput.onkeyup = startDraw;
+heightInput.oninput = startDraw;
+brickSelect.onchange = startDraw;
 
 function startDraw() {
 
